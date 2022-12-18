@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid darkslategray;
+            background-color: slategray;
+            width: 800px;
+            height: 300px;
+            overflow: auto;
+        }
+        .container div{
+            background-color: rgb(194, 242, 34);
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            /*float: left;*/
+        }
+    </style>
+    <script>
+        function fun3(){
+            console.log("inside fun3")
+        }
+        function fun2(){
+            console.log("inside fun2")
+        }
+        function fun1(){
+            console.log("inside fun1")
+        }
+        window.onload = fun1;
+        window.addEventListener("load", fun2);
+        document.addEventListener("DOMContentLoaded", fun3);
+    </script>
+</head>
+<body onload="fun1()">
+    <button>Add Box</button>
+    <hr>
+    <div class="container"></div>
+</body>
+</html>
